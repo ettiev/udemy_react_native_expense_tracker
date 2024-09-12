@@ -29,24 +29,24 @@ function ExpensesOverview() {
         tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
         tabBarActiveTintColor: GlobalStyles.colors.accent500,
         headerRight: ({tintColor}) => (
-          <IconButton 
-            icon="add" 
-            size={24} 
-            color={tintColor} 
+          <IconButton
+            icon="add"
+            size={24}
+            color={tintColor}
             onPress={ () => {
               navigation.navigate('ManageExpense')
-            }} 
+            }}
           />
         )
       })}
     >
-      <BottomTabs.Screen 
-        name='RecentExpenses' 
+      <BottomTabs.Screen
+        name='RecentExpenses'
         component={ RecentExpenses }
         options={{
           title: 'Recent Expenses',
           tabBarLabel: 'Recent',
-          tabBarIcon: ({color, size}) => <Ionicons name='hourglass' color={color} size={size} />
+          tabBarIcon: ({color, size}) => (<Ionicons name='hourglass' color={color} size={size} />)
         }}
       />
       <BottomTabs.Screen 
@@ -55,11 +55,11 @@ function ExpensesOverview() {
         options={{
           title: 'All Expenses',
           tabBarLabel: 'All Expenses',
-          tabBarIcon: ({color, size}) => <Ionicons name='calendar' color={color} size={size} />
+          tabBarIcon: ({color, size}) => (<Ionicons name='calendar' color={color} size={size} />)
         }}
       />
     </BottomTabs.Navigator>
-  )  
+  );  
 }
 
 export default function App() {
@@ -85,7 +85,7 @@ export default function App() {
               name='ManageExpense' 
               component={ ManageExpense }
               options={{
-                presentation: 'modal'  //optional in Android
+                presentation: 'modal'
               }}
             />
           </Stack.Navigator>
