@@ -113,7 +113,7 @@ function ExpensesContextProvider({ children }) {
         updateExpense: updateExpense
     }
 
-    return <ExpensesContextProvider value={value}>{ children }</ExpensesContextProvider>
+    return <ExpensesContext.Provider value={value}>{ children }</ExpensesContext.Provider>
 }
 
 export default ExpensesContextProvider;
